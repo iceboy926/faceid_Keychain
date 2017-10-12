@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529481532.600839"
+            timestampString = "529487149.952122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529481532.601546"
+            timestampString = "529487149.952886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529481532.602082"
+            timestampString = "529487149.953465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "-generateKeyAsync:"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529481532.602598"
+            timestampString = "529487149.954031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "-useKeyAsync:digestData:digestLength:signature:signatureLength:"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529481532.603094"
+            timestampString = "529487149.954589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
             landmarkName = "-useKeyAsync:digestData:digestLength:signature:signatureLength:"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529481574.2434"
+            timestampString = "529487149.95573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
-            landmarkName = "-getPassword:"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "-useKeyAsync:digestData:digestLength:signature:signatureLength:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,12 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529481578.969191"
+            timestampString = "529487149.956292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
-            landmarkName = "-useKeyAsync:digestData:digestLength:signature:signatureLength:"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-avaliableAction:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

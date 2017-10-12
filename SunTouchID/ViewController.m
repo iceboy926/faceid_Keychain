@@ -49,9 +49,9 @@
 
 - (IBAction)userTouchIDAction:(UIButton *)sender {
     
-    if(_isCanUseTouchID == NO){
-        return;
-    }
+//    if(_isCanUseTouchID == NO){
+//        return;
+//    }
     
     LAContext *context = [[LAContext alloc] init];
     context.localizedFallbackTitle = @"自定义标题";
@@ -73,7 +73,6 @@
            {
                NSLog(@"LABiometryNone support");
            }
-           
        }
     }
     
@@ -172,8 +171,6 @@
     if (status == errSecSuccess) {
         // In your own code, here is where you'd store/use the keys.
         
-        
-        
 //        NSDictionary *pubDict = @{
 //                                  (__bridge id)kSecClass              : (__bridge id)kSecClassKey,
 //                                  (__bridge id)kSecAttrKeyType        : (__bridge id)kSecAttrKeyTypeEC,
@@ -186,10 +183,7 @@
 //        status = SecItemAdd((__bridge CFDictionaryRef)pubDict, &dataRef);
 //        NSData *publicdata = (__bridge NSData *)(dataRef);
 //        *publickeybyte = [publicdata bytes];
-        
-        
-        
-        
+    
         CFRelease(privateKey);
         CFRelease(publicKey);
     }
@@ -208,11 +202,11 @@
 {
     OSStatus status = noErr;
     NSCondition *conditionlock = [[NSCondition alloc] init];
-    
     SecKeyRef privateKey = nil;
     
     LAContext *context = [[LAContext alloc] init];
-    context.localizedFallbackTitle = @"自定义标题";
+    context.localizedFallbackTitle = @"testMy";
+    
     BOOL success = [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:nil];
     if(success){
         NSLog(@"can use");
@@ -236,12 +230,10 @@
     }
     
     [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"为什么使用TouchID写这里" reply:^(BOOL success, NSError * _Nullable error){
-        
         if(success == YES)
         {
             [conditionlock signal];
         }
-        
     }];
     
     
@@ -264,14 +256,11 @@
     {
         status = SecKeyRawSign(privateKey, kSecPaddingNone, digestData, digestLength, signature, signatureLength);
         NSLog(@"%s", "end CreateUAFV1RegResponse_useKeyAsyncSign\n");
-
     }
     else
     {
         NSLog(@"status is 0x%x", status);
     }
-    
-    
     
     return status;
 }
@@ -284,8 +273,6 @@
     {
         NSLog(@"generateKeyAsync ok");
     }
-    
-  
 }
 
 
@@ -302,7 +289,6 @@
     {
         NSLog(@"sign ok");
     }
-    
 }
 
 
