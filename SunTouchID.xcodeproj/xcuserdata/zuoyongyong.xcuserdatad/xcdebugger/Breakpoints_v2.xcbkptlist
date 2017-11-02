@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529487149.952122"
+            timestampString = "531299774.208595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-userTouchIDAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529487149.952886"
+            timestampString = "531299774.209004"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-userTouchIDAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529487149.953465"
+            timestampString = "531299774.209247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "-generateKeyAsync:"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529487149.954031"
+            timestampString = "531299774.209473"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "-useKeyAsync:digestData:digestLength:signature:signatureLength:"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529487149.954589"
+            timestampString = "531299774.20969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
             landmarkName = "-useKeyAsync:digestData:digestLength:signature:signatureLength:"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529487149.95573"
+            timestampString = "531299774.209913"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "-useKeyAsync:digestData:digestLength:signature:signatureLength:"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunTouchID/ViewController.m"
-            timestampString = "529487149.956292"
+            timestampString = "531299774.21013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-avaliableAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SunTouchID/ViewController.m"
+            timestampString = "531299774.210339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-avaliableAction:"
             landmarkType = "7">
          </BreakpointContent>

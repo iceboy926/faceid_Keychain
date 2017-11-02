@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 #import "SunKeychainTool.h"
+#include <sys/sysctl.h>
 
 @interface ViewController ()
 
@@ -28,12 +29,65 @@
 
 }
 
+- (NSString*)devicemodel
+{
+    size_t size;
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    char *machine = (char*)malloc(size);
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSString *deviceString = [NSString stringWithCString:machine
+                                                encoding:NSUTF8StringEncoding];
+    
+    
+    //iPhone
+    if ([deviceString isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
+    if ([deviceString isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
+    if ([deviceString isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
+    if ([deviceString isEqualToString:@"iPhone3,1"])    return @"iPhone 4";
+    if ([deviceString isEqualToString:@"iPhone3,2"])    return @"Verizon iPhone 4";
+    if ([deviceString isEqualToString:@"iPhone4,1"])    return @"iPhone 4S";
+    if ([deviceString isEqualToString:@"iPhone5,1"])    return @"iPhone 5";
+    if ([deviceString isEqualToString:@"iPhone5,2"])    return @"iPhone 5";
+    if ([deviceString isEqualToString:@"iPhone5,3"])    return @"iPhone 5C";
+    if ([deviceString isEqualToString:@"iPhone5,4"])    return @"iPhone 5C";
+    if ([deviceString isEqualToString:@"iPhone6,1"])    return @"iPhone 5S";
+    if ([deviceString isEqualToString:@"iPhone6,2"])    return @"iPhone 5S";
+    if ([deviceString isEqualToString:@"iPhone7,1"])    return @"iPhone 6 Plus";
+    if ([deviceString isEqualToString:@"iPhone7,2"])    return @"iPhone 6";
+    if ([deviceString isEqualToString:@"iPhone8,1"])    return @"iPhone 6s";
+    if ([deviceString isEqualToString:@"iPhone8,2"])    return @"iPhone 6s Plus";
+    if ([deviceString isEqualToString:@"iPhone9,1"])    return @"iPhone 7";
+    if ([deviceString isEqualToString:@"iPhone9,2"])    return @"iPhone 7 Plus";
+    if ([deviceString isEqualToString:@"iPhone10,1"])   return @"iPhone 8";
+    if ([deviceString isEqualToString:@"iPhone10,2"])   return @"iPhone 8 Plus";
+    if ([deviceString isEqualToString:@"iPhone10,3"])   return @"iPhone X";
+    if ([deviceString isEqualToString:@"iPhone10,6"])   return @"iPhone X";
+    
+    return deviceString;
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
     [self.view endEditing:YES];
 }
 
+-(void)showAlert:(NSString *)msg
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+    });
+    
+}
+
 - (IBAction)avaliableAction:(UIButton *)sender {
+    
+    
+    if([[self devicemodel] isEqualToString:@"iPhone X"])
+    {
+        [self showAlert:@"iphone x"];
+    }
     
     LAContext *context = [[LAContext alloc] init];
     BOOL success = [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:nil];
@@ -58,20 +112,23 @@
     BOOL success = [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:nil];
     if(success){
         NSLog(@"can use");
-        if([context respondsToSelector:@selector(biometryType)])
+        if(@available(iOS 11.0, *))
        {
            NSLog(@"biometryType ");
            if(context.biometryType == LABiometryTypeTouchID)
            {
                NSLog(@"LABiometryTypeTouchID support");
+               [self showAlert:@"support touchid"];
            }
            else if (context.biometryType == LABiometryTypeFaceID)
            {
                NSLog(@"LABiometryTypeFaceID support");
+               [self showAlert:@"support faceid"];
            }
            else if (context.biometryType == LABiometryNone)
            {
                NSLog(@"LABiometryNone support");
+               [self showAlert:@"support LABiometryNone"];
            }
        }
     }
@@ -149,7 +206,7 @@
     //     Create parameters dictionary for key generation.
     sacObject = SecAccessControlCreateWithFlags(kCFAllocatorDefault,
                                                 kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly,
-                                                kSecAccessControlUserPresence | kSecAccessControlPrivateKeyUsage, &error);
+                                                kSecAccessControlTouchIDAny | kSecAccessControlPrivateKeyUsage, &error);
     
     
     // Create parameters dictionary for key generation.
